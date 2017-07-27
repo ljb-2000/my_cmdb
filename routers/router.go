@@ -27,6 +27,11 @@ func init() {
 					&controllers.ProjectEnviController{},
 				),
 			),
+			beego.NSNamespace("/etcd",
+				beego.NSInclude(
+					&controllers.ProjectSetEtcdController{},
+				),
+			),
 		),
 	)
 	beego.AddNamespace(ns)
